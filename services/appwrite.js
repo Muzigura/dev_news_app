@@ -15,6 +15,9 @@ const client = new Client()
     .setProject(config.projectId);
 
 switch (Platform.OS) {
+    case 'android':
+        client.setPlatform(process.env.EXPO_PUBLIC_APPWRITE_PACKAGE_NAME);
+        break;
     
 }
 

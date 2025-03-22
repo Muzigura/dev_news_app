@@ -8,20 +8,22 @@ const HomeScreen = () => {
   
   return (
     <View style={styles.container}>
+      <Image source={PostItImage} style={styles.image} />  {/* Fixed the reference */}
       
-      <Image source={PostItImage} style={StyleSheet.image} />
-      <Text style={styles.title}>Welcome To Tech Trending and Updates App.</Text>
-      <Text style={styles.subtitle}>Capture your tech trending news and updates anytime, anywhere
+      <Text style={styles.title}>
+        Welcome To Tech Trending and Updates App.
+      </Text>
       
+      <Text style={styles.subtitle}>
+        Capture your tech trending news and updates anytime, anywhere.
       </Text>
 
       <TouchableOpacity
         style={styles.button}
         onPress={() => router.push('/notes')}
-        >
-          <Text style={styles.buttontext}>Get Started</Text>
+      >
+        <Text style={styles.buttonText}>Get Started</Text>  {/* Fixed the reference */}
       </TouchableOpacity>
-
     </View>
   );
 };
@@ -29,7 +31,7 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContainer: 'center',
+    justifyContent: 'center',  // Fixed typo
     alignItems: 'center',
     padding: 20,
     backgroundColor: '#f8f9fa',
@@ -45,11 +47,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
     color: '#333',
+    textAlign: 'center',
   },
   subtitle: {
     fontSize: 16,
     color: '#666',
-    textAlign: 20,
+    textAlign: 'center',  // Fixed incorrect value
+    marginBottom: 20,
   },
   button: {
     backgroundColor: '#007bff',
@@ -58,7 +62,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
   },
-  buttonText: {
+  buttonText: {  // Fixed incorrect reference
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
